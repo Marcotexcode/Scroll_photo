@@ -1,0 +1,116 @@
+
+    body{
+       margin: 0; /*leva li margine da tutto il corpo */
+       padding: 0; /*Leva il padding da tutto il corpo*/
+       height: 100vh;/* significa che l'altezza di questo elemento è uguale al 100% dell'altezza del viewport (schermo). esempio: altezza: 50vh; Se l'altezza dello schermo è 1000 px, l'altezza del tuo elemento sarà pari a 500 px (50% di 1000 px)*/
+       display: flex; /*La proprietà flex di CSS è una proprietà shorthand usata per modificare le dimensioni di un elemento flessibile e riempire gli spazi. Gli elementi flex possono essere usati per distribuire lo spazio in modo proporzionale, al loro allargarsi o al loro restringersi, per evitare sovrapposizioni o eccedenze.*/
+       justify-content: center; /*La proprietà CSS justify-content definisce il modo in cui il browser distribuisce lo spazio tra e intorno agli elementi di contenuto lungo l' asse principale di un contenitore flessibile e l'asse in linea di un contenitore a griglia.*/
+       align-items: center; /*La proprietà CSS align-items imposta il align-selfvalore su tutti i figli diretti come un gruppo. In Flexbox, controlla l'allineamento degli elementi sull'asse trasversale . In Grid Layout, controlla l'allineamento degli elementi sull'asse del blocco all'interno della loro area della griglia .*/
+       background: #23E3C9;
+    }
+
+    .slider{
+      width: 800px;
+      height: 500px;
+      border-radius: 10px;
+      overflow: hidden; /* tutti gli elementi li mette dentro al div slider senza farli uscire */
+    }
+
+    .slides{
+      width: 500%;
+      height: 500px;
+      display: flex; /* affianca tuttl tutti gli elementi a destra */
+    }
+
+    /* elementi per lo slide automatico nascosti */
+    .slides input{
+      display: none; /* è comunemente usato con JavaScript per nascondere e mostrare elementi senza eliminarli e ricrearli.*/
+    }
+
+    .slide{
+      width: 20%;
+      transition:  1s; /* consentono di modificare i valori delle proprietà in modo fluido, per una determinata durata.*/
+    }
+
+    .slide img{
+      width: 800px; /* larghezza dell imaggine dentro al div */
+      height: 500px; /* lunghezza dell imagine dentro al div */
+    }
+
+    /* css for manual slide navigaton  */
+
+    .navigatio-manual{
+      position: absolute; /*è posizionato rispetto all'antenato posizionato più vicino (invece di posizionato rispetto al viewport, come fisso).*/
+      width: 800px;
+      margin-top: -40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .manual-btn{
+      border: 2px solid #40D3DC;
+      padding: 5px;
+      border-radius: 10px;
+      cursor: pointer; /* specifica il cursore del mouse da visualizzare quando si punta su un elemento.*/
+      transition:  1s;
+    }
+
+    .manual-btn:not(:last-child){ /* esclude dalla selezione l'elemento che gli è stato passato. Il selettore: last-child seleziona l'ultimo figlio. La combinazione di questi due selettori sopra per escludere gli ultimi figli (div interno) di ogni div genitore dalla selezione*/
+      margin-right: 40px; /* da il margine destro a tutti gli elementi tranne l'ultimo*/
+    }
+
+    .manual-btn:hover{ /* al passaggio del mouse */
+      background: #40D3DC; /* l'inerno dell pallino si colora */
+    }
+
+    #radio1:checked ~ .first{ /* serve per scorrere le immagini premendo i pallini*/
+      margin-left: 0;
+    }
+
+    #radio2:checked ~ .first{ /* serve per scorrere le immagini premendo i pallini*/
+      margin-left: -20%;
+    }
+
+    #radio3:checked ~ .first{ /* serve per scorrere le immagini premendo i pallini*/
+      margin-left: -40%;
+    }
+    #radio4:checked ~ .first{ /* serve per scorrere le immagini premendo i pallini*/
+      margin-left: -60%;
+    }
+
+    /* css for automatic navigation */
+
+    .navigation-auto{ /* sovrappone i radio per auto  sopra i radio per i manuali*/
+      position: absolute;
+      display: flex;
+      width: 800px;
+      justify-content: center; /* senza una laghezza non funziona*/
+      margin-top: 460px;
+    }
+
+    .navigation-auto div{
+      border: 2px solid #40D3DC;
+      padding: 5px;
+      border-radius: 10px;
+      transition: 1s;
+    }
+
+    .navigation-auto div:not(:last-child){
+      margin-right: 40px;
+    }
+
+    #radio1:checked ~ .navigation-auto .auto-btn1{
+      background: #40D3DC;
+    }
+
+    #radio2:checked ~ .navigation-auto .auto-btn2{
+      background: #40D3DC;
+    }
+
+    #radio3:checked ~ .navigation-auto .auto-btn3{
+      background: #40D3DC;
+    }
+
+    #radio4:checked ~ .navigation-auto .auto-btn4{
+      background: #40D3DC;
+    }
