@@ -1,16 +1,16 @@
 
     body{
-       margin: 0; /*leva li margine da tutto il corpo */
-       padding: 0; /*Leva il padding da tutto il corpo*/
-       height: 100vh;/* significa che l'altezza di questo elemento è uguale al 100% dell'altezza del viewport (schermo). esempio: altezza: 50vh; Se l'altezza dello schermo è 1000 px, l'altezza del tuo elemento sarà pari a 500 px (50% di 1000 px)*/
-       display: flex; /*La proprietà flex di CSS è una proprietà shorthand usata per modificare le dimensioni di un elemento flessibile e riempire gli spazi. Gli elementi flex possono essere usati per distribuire lo spazio in modo proporzionale, al loro allargarsi o al loro restringersi, per evitare sovrapposizioni o eccedenze.*/
-       justify-content: center; /*La proprietà CSS justify-content definisce il modo in cui il browser distribuisce lo spazio tra e intorno agli elementi di contenuto lungo l' asse principale di un contenitore flessibile e l'asse in linea di un contenitore a griglia.*/
-       align-items: center; /*La proprietà CSS align-items imposta il align-selfvalore su tutti i figli diretti come un gruppo. In Flexbox, controlla l'allineamento degli elementi sull'asse trasversale . In Grid Layout, controlla l'allineamento degli elementi sull'asse del blocco all'interno della loro area della griglia .*/
+       margin: 0; 
+       padding: 0; 
+       height: 100vh;
+       display: flex;
+       justify-content: center; 
+       align-items: center; 
        background: #23E3C9;
     }
 
     .slider{
-      width: 800px;
+      width: 60%;
       height: 500px;
       border-radius: 10px;
       overflow: hidden; /* tutti gli elementi li mette dentro al div slider senza farli uscire */
@@ -33,7 +33,7 @@
     }
 
     .slide img{
-      width: 800px; /* larghezza dell imaggine dentro al div */
+      width: 100%; /* larghezza dell imaggine dentro al div */
       height: 500px; /* lunghezza dell imagine dentro al div */
     }
 
